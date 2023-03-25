@@ -16,20 +16,15 @@
   },
   "cds": {
     "build": {
-        "tasks": [
-            {
-                "for": "hana",
-                "dest": "../db"
-            },
-            {
-                "for": "node-cf"
-            }
-        ]
+        "target": "."
     },
     "requires": {
         "db": {
-            "kind": "hana-cloud"
+            "kind": "hana"
+        }
+    },
+    "hana": {
+        "deploy-format": "hdbtable"
         }
     }
-}
 }
